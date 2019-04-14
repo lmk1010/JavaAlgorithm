@@ -18,7 +18,7 @@ public interface MyList<T> {
     /**
      * 初始化线性表，需要给定起始大小
      */
-    void initList(int maxsize);
+    void InitList();
 
     /**
      * 返回线性表的长度
@@ -43,17 +43,17 @@ public interface MyList<T> {
     /**
      * 返回元素x在L中的位置序号
      **/
-    int locate(Object x);
+    int locate(T x);
 
     /**
      * 在指定位置插入元素
      **/
-    boolean insert(T x, int index);
+    void insert(T x, int index);
 
     /**
      * 删除指定位置的元素
      **/
-    boolean delete(int index);
+    void delete(int index);
 
     /**
      * 判断此线性表是否为空

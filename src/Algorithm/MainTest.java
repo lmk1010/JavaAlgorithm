@@ -17,11 +17,5 @@ public class MainTest {
 
         LinearList<String> linearList = new LinearList<>();
 
-        linearList.initList(10);
-
-        linearList.insert("hello", 1);
-
-        linearList.print();
-
     }
 }

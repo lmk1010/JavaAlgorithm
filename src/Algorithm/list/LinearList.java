@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @ClassName LinearList
- * @Description 线性表Java实现 注:默认返回index下标全部为0开始
+ * @Description todo 线性表Java实现 注:默认返回index下标全部为0开始 fixme bug准备重写
  * @Author liumingkang
  * @Date 2019-04-13 20:45
  * @Version 1.0
@@ -16,10 +16,10 @@ public class LinearList<T> implements MyList<T> {
 
     private Object[] data; //data数组
 
-    private int maxsize; //初始线性表的长度
+    private int maxsize = 10; //初始线性表的长度
 
     @Override
-    public void initList(int maxsize) {
+    public void InitList() {
         if (maxsize <= 0) {
             System.err.println("JavaAlgorithm:初始化容量不能为0！");
         }
@@ -82,18 +82,15 @@ public class LinearList<T> implements MyList<T> {
     }
 
     @Override
-    public boolean insert(T x, int index) {
+    public void insert(T x, int index) {
         if (index < 0 || index > this.maxsize) {
             System.err.println("JavaAlgorithm:非法的下标序号！");
-            return false;
         }
         if (this.data[maxsize - 1] != null) {
             System.err.println("JavaAlgorithm:线性表已满！");
-            return false;
         }
         if (x == null) {
             System.err.println("JavaAlgorithm:Object为空！");
-            return false;
         }
         if (this.data[index] == null) {
             int i = 0;
@@ -106,12 +103,11 @@ public class LinearList<T> implements MyList<T> {
             this.data[i] = this.data[i - 1];
         }
         this.data[index] = x;
-        return true;
     }
 
     @Override
-    public boolean delete(int index) {
-        return false;
+    public void delete(int index) {
+
     }
 
     @Override

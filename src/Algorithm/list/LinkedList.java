@@ -1,6 +1,6 @@
 package Algorithm.list;
 
-import Algorithm.list.base.List;
+
 import Algorithm.list.base.MyList;
 import com.sun.org.apache.bcel.internal.generic.LNEG;
 
